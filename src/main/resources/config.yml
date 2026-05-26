@@ -1,0 +1,61 @@
+items:
+  anti-flight_stick:
+    cooldown: 7
+
+  dual_blades:
+    damage: 5
+
+  first_strike:
+    damage: 7
+
+  last_strike:
+    damage: 7
+
+  healing_wand:
+    cooldown: 7
+    heal: 10
+
+  infinite_beef:
+    cooldown: 20
+
+  longsword:
+    far_damage: 8
+    close_damage: 6
+    range: 3
+
+  shock_blade:
+    cooldown: 0.25
+    damage: 5
+    ability_damage: 7
+    xp_cost: 250
+
+  short_dagger:
+    damage: 6
+
+  shuriken:
+    cooldown: 0.5
+    damage: 4
+
+  vampire_blade:
+    cooldown: 1
+    damage: 7
+    lifesteal_ratio: 0.25
+
+armor:
+  jetpack:
+    fuel: 100
+
+  earthquake_boots:
+    cooldown: 7
+
+  speedster_boots:
+    bonus_speed: 0.5
+
+  titan_chestplate:
+    speed: -0.2
+    damage_reduction: 0.2
+    damage_penalty: 0.2
+    health: 20
+
+messages:
+  cooldown: "&cAbility on cooldown for &e%time%s&c."

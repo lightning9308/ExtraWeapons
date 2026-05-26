@@ -1,0 +1,8 @@
+name: ExtraWeapons
+version: '${project.version}'
+main: me.lightning.extraweapons.ExtraWeapons
+api-version: '1.21'
+commands:
+  extraweapons:
+    aliases: ew
+    permission: extraweapons.admin
