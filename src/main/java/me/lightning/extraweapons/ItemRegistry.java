@@ -22,6 +22,7 @@ public class ItemRegistry {
         register(new ShockBlade());
         register(new Shuriken());
         register(new FirstStrike());
+        register(new GravityBlade());
     }
 
     private static void register(CustomItem item) {

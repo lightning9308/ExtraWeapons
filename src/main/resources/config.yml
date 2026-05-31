@@ -41,6 +41,10 @@ items:
     damage: 7
     lifesteal_ratio: 0.25
 
+  gravity_blade:
+    pull: 2
+    damage: 6
+
 armor:
   jetpack:
     fuel: 100
