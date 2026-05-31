@@ -75,13 +75,14 @@ public class ShockBlade extends CustomItem {
 
         if (!cooldown.isOver(player)) return;
 
-        player.getWorld().spawnParticle(Particle.EXPLOSION,player.getLocation(),4,2,0,2);
-        Collection<Entity> entities = player.getNearbyEntities(4,2,4);
-
         if (player.getTotalExperience() < xp) {
             player.sendMessage("not enough exp");
             return;
         }
+
+        player.getWorld().spawnParticle(Particle.EXPLOSION,player.getLocation(),4,2,0,2);
+        Collection<Entity> entities = player.getNearbyEntities(4,2,4);
+
         player.giveExp(-xp);
 
         for (Entity entity:entities) {

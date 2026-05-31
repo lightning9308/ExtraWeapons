@@ -27,6 +27,7 @@ public final class ExtraWeapons extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ArmorChangeListener(), this);
         getServer().getPluginManager().registerEvents(new DamageListener(), this);
         getServer().getPluginManager().registerEvents(new SneakListener(), this);
+        getServer().getPluginManager().registerEvents(new ProjectileHitListener(), this);
 
     }
 

@@ -23,6 +23,7 @@ public class ItemRegistry {
         register(new Shuriken());
         register(new FirstStrike());
         register(new GravityBlade());
+        register(new FrostOrb());
     }
 
     private static void register(CustomItem item) {
