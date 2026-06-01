@@ -45,6 +45,8 @@ items:
     pull: 2
     damage: 6
 
+  ink_bomb:
+    cooldown: 10
 armor:
   jetpack:
     fuel: 100

@@ -5,6 +5,7 @@ import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.armors.CustomArmor;
 import me.lightning.extraweapons.items.CustomItem;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -67,7 +68,7 @@ public class ExtraWeaponCommand implements CommandExecutor, TabCompleter {
         }
 
         if (subCommand.equalsIgnoreCase("menu")) {
-            Inventory inv = Bukkit.createInventory(player,18, "ExtraWeapons");
+            Inventory inv = Bukkit.createInventory(player,27, Component.text("ExtraWeapons"));
             for (CustomArmor armor : ArmorRegistry.getAll()) {
                 inv.addItem(armor.getItem());
             }

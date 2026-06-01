@@ -42,6 +42,7 @@ public class FrostOrb extends CustomItem {
                 .flags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ADDITIONAL_TOOLTIP)
                 .lore(
                         Component.text("§6§lABILITY: RIGHT CLICK"),
+                        Component.text("§7Launch the frozen orb."),
                         Component.text("§7Landing 4 consecutive hits"),
                         Component.text("§7freezes the enemy for 1.5s."))
                 .build();
@@ -62,7 +63,7 @@ public class FrostOrb extends CustomItem {
         cooldown.start(player, 0.5);
     }
 
-    public void onSnowballHit(ProjectileHitEvent e) {
+    public void onProjectileHit(ProjectileHitEvent e) {
         if (!(e.getHitEntity() instanceof LivingEntity entity)) return;
         UUID entityUUID = entity.getUniqueId();
 
