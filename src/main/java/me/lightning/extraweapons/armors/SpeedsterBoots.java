@@ -37,7 +37,7 @@ public class SpeedsterBoots extends CustomArmor {
                         .decoration(TextDecoration.BOLD, true))
                 .color(Color.fromRGB(85, 120, 150))
                 .flags(ItemFlag.HIDE_DYE, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ADDITIONAL_TOOLTIP)
-                .attribute(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier(Keys.stats,bonusSpeed, AttributeModifier.Operation.MULTIPLY_SCALAR_1, EquipmentSlotGroup.FEET))
+                .attribute(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier(Keys.stats(getID()),bonusSpeed, AttributeModifier.Operation.MULTIPLY_SCALAR_1, EquipmentSlotGroup.FEET))
                 .lore(
                 Component.text("§6§lPASSIVE"),
                 Component.text("§7Adds %s%% speed, consume".formatted(bonusSpeed * 100).replace(".0","")),

@@ -13,6 +13,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
@@ -36,9 +37,10 @@ public class ShortDagger extends CustomItem {
                 .flags(ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_ADDITIONAL_TOOLTIP)
                 .attribute(Attribute.GENERIC_ATTACK_DAMAGE,
                         new AttributeModifier(
-                                Keys.stats,
+                                Keys.stats(getID()),
                                 baseDamage - 1,
-                                AttributeModifier.Operation.ADD_NUMBER
+                                AttributeModifier.Operation.ADD_NUMBER,
+                                EquipmentSlotGroup.MAINHAND
                         ))
                 .lore(
                 Component.text("§7§l──────────"),

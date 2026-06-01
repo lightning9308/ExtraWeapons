@@ -13,6 +13,7 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 
@@ -38,15 +39,17 @@ public class VampireBlade extends CustomItem {
                 .glow(true)
                 .attribute(Attribute.GENERIC_ATTACK_SPEED,
                 new AttributeModifier(
-                        Keys.stats,
+                        Keys.stats(getID()),
                         -2.4,
-                        AttributeModifier.Operation.ADD_NUMBER
+                        AttributeModifier.Operation.ADD_NUMBER,
+                        EquipmentSlotGroup.MAINHAND
                 ))
                 .attribute(Attribute.GENERIC_ATTACK_DAMAGE,
                         new AttributeModifier(
-                                Keys.stats,
+                                Keys.stats(getID()),
                                 baseDamage - 1,
-                                AttributeModifier.Operation.ADD_NUMBER
+                                AttributeModifier.Operation.ADD_NUMBER,
+                                EquipmentSlotGroup.MAINHAND
                         ))
                 .flags(ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_ADDITIONAL_TOOLTIP)
                 .lore(

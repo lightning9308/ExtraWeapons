@@ -13,6 +13,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
@@ -37,14 +38,16 @@ public class GravityBlade extends CustomItem {
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES)
                 .attribute(Attribute.GENERIC_ATTACK_DAMAGE,
                         new AttributeModifier(
-                                Keys.stats,
+                                Keys.stats(getID()),
                                 baseDamage - 1,
-                                AttributeModifier.Operation.ADD_NUMBER))
+                                AttributeModifier.Operation.ADD_NUMBER,
+                                EquipmentSlotGroup.MAINHAND))
                 .attribute(Attribute.GENERIC_ATTACK_SPEED,
                         new AttributeModifier(
-                                Keys.stats,
+                                Keys.stats(getID()),
                                 -2.4,
-                                AttributeModifier.Operation.ADD_NUMBER))
+                                AttributeModifier.Operation.ADD_NUMBER,
+                                EquipmentSlotGroup.MAINHAND))
                 .maxDamage(250)
                 .glow(true)
                 .lore(

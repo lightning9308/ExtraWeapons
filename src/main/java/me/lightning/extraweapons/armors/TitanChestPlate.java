@@ -44,8 +44,8 @@ public class TitanChestPlate extends CustomArmor {
                 .color(Color.fromRGB(85, 90, 100))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DYE, ItemFlag.HIDE_ARMOR_TRIM)
                 .armorTrim(new ArmorTrim(TrimMaterial.NETHERITE, TrimPattern.TIDE))
-                .attribute(Attribute.GENERIC_MAX_HEALTH, new AttributeModifier(Keys.stats,health, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
-                .attribute(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier(Keys.stats,speed, AttributeModifier.Operation.MULTIPLY_SCALAR_1, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_MAX_HEALTH, new AttributeModifier(Keys.stats(getID()),health, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier(Keys.stats(getID()),speed, AttributeModifier.Operation.MULTIPLY_SCALAR_1, EquipmentSlotGroup.CHEST))
                 .maxDamage(500)
                 .lore(
                 Component.text("§7§l──────────"),
