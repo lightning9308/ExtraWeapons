@@ -47,6 +47,9 @@ items:
 
   ink_bomb:
     cooldown: 10
+
+  launch_bow:
+    cooldown: 3
 armor:
   jetpack:
     fuel: 100

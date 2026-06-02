@@ -1,6 +1,7 @@
 package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.Utils;
+import me.lightning.extraweapons.items.LaunchBow;
 import me.lightning.extraweapons.items.TrackerBow;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,6 +17,10 @@ public class EntityShootBowListener implements Listener {
 
         if (Utils.isItem(bow,"tracker_bow")) {
             ((TrackerBow)Utils.getCustomItem(bow)).onBowShoot(e);
+        }
+
+        if (Utils.isItem(bow,"launch_bow")) {
+            ((LaunchBow)Utils.getCustomItem(bow)).onBowShoot(e);
         }
     }
 }
