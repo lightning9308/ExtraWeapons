@@ -50,6 +50,9 @@ items:
 
   launch_bow:
     cooldown: 3
+
+  shortbow:
+    cooldown: 0.25
 armor:
   jetpack:
     fuel: 100

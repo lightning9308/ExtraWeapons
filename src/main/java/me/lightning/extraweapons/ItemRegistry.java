@@ -27,6 +27,7 @@ public class ItemRegistry {
         register(new InkBomb());
         register(new TrackerBow());
         register(new LaunchBow());
+        register(new ShortBow());
     }
 
     private static void register(CustomItem item) {
