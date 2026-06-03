@@ -2,11 +2,19 @@ package me.lightning.extraweapons;
 
 import me.lightning.extraweapons.armors.CustomArmor;
 import me.lightning.extraweapons.items.CustomItem;
+import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
 public class Utils {
+    static FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+    static String cooldownMsg = config.getString("messages.cooldown");
+
+    public static String cooldownMsg(String remaining) {
+        return ChatColor.translateAlternateColorCodes('&',cooldownMsg).replace("%time%",remaining);
+    }
 
     public static boolean isItem(ItemStack item, String ID) {
         if (item == null || item.getType().isAir()) return false;

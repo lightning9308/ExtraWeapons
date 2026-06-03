@@ -1,7 +1,6 @@
 package me.lightning.extraweapons.items;
 
 import me.lightning.extraweapons.Cooldown;
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
@@ -11,7 +10,6 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -25,7 +23,7 @@ import java.util.Collection;
 public class ShockBlade extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double baseDamage = config.getDouble("items.shock_blade.damage");
     double duration = config.getDouble("items.shock_blade.cooldown");
     int xp = config.getInt("items.shock_blade.xp_cost");

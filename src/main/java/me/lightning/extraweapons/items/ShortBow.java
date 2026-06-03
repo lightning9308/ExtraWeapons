@@ -1,14 +1,12 @@
 package me.lightning.extraweapons.items;
 
 import me.lightning.extraweapons.Cooldown;
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.AbstractArrow;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Player;
@@ -18,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class ShortBow extends CustomItem {
 
-    FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double duration = config.getDouble("items.shortbow.cooldown");
 
     Cooldown cooldown = new Cooldown();

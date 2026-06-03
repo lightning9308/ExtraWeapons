@@ -1,6 +1,5 @@
 package me.lightning.extraweapons.items;
 
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
@@ -9,7 +8,6 @@ import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -20,7 +18,6 @@ import org.bukkit.util.Vector;
 
 public class GravityBlade extends CustomItem {
 
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double baseDamage = config.getDouble("items.gravity_blade.damage");
     double pull_strength = config.getDouble("items.gravity_blade.pull");
 

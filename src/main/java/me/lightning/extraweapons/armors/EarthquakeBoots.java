@@ -7,7 +7,6 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -24,7 +23,7 @@ import java.util.Collection;
 public class EarthquakeBoots extends CustomArmor {
 
     Cooldown cooldown = new Cooldown();
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double duration = config.getDouble("armor.earthquake_boots.cooldown");
     String cooldownMsg = config.getString("messages.cooldown");
 

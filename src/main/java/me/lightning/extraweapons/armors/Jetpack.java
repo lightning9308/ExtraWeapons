@@ -7,7 +7,6 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
@@ -28,7 +27,7 @@ public class Jetpack extends CustomArmor {
     private final Map<UUID, Integer> fuel = new HashMap<>();
 
     Cooldown cooldown = new Cooldown();
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     int maxFuel = config.getInt("armor.jetpack.fuel");
 
 

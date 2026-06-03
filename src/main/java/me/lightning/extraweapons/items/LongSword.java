@@ -1,6 +1,5 @@
 package me.lightning.extraweapons.items;
 
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
@@ -10,7 +9,6 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.EquipmentSlotGroup;
@@ -19,7 +17,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class LongSword extends CustomItem {
 
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double farDamage = config.getDouble("items.longsword.far_damage");
     double closeDamage = config.getDouble("items.longsword.close_damage");
     double range = config.getDouble("items.longsword.range");

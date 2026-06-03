@@ -1,6 +1,8 @@
 package me.lightning.extraweapons.items;
 
+import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.Keys;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
@@ -8,6 +10,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
 public abstract class CustomItem {
+
+    protected final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     public abstract String getID();
 
     protected abstract ItemStack createItem();

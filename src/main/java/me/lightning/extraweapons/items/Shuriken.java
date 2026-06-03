@@ -9,7 +9,6 @@ import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -22,7 +21,6 @@ import java.util.Collection;
 public class Shuriken extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double duration = config.getDouble("items.shuriken.cooldown");
     double baseDamage = config.getDouble("items.shuriken.damage");
 

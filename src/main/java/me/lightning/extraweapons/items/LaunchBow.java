@@ -1,14 +1,12 @@
 package me.lightning.extraweapons.items;
 
 import me.lightning.extraweapons.Cooldown;
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityShootBowEvent;
@@ -18,7 +16,7 @@ import org.bukkit.util.Vector;
 
 public class LaunchBow extends CustomItem {
 
-    FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double duration = config.getDouble("items.launch_bow.cooldown");
     String cooldownMsg = config.getString("messages.cooldown");
 

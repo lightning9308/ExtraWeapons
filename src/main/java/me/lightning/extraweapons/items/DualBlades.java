@@ -11,7 +11,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.EquipmentSlotGroup;
@@ -20,7 +19,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class DualBlades extends CustomItem {
 
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double baseDamage = config.getDouble("items.dual_blades.damage");
 
     @Override

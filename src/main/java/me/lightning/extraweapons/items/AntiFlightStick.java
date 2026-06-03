@@ -7,7 +7,6 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -19,7 +18,7 @@ import org.bukkit.util.Vector;
 public class AntiFlightStick extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double duration = config.getDouble("items.anti-flight_stick.cooldown");
     String cooldownMsg = config.getString("messages.cooldown");
 

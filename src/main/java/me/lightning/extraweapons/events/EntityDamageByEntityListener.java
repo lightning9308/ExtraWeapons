@@ -2,7 +2,7 @@ package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.Utils;
-import me.lightning.extraweapons.armors.TitanChestPlate;
+import me.lightning.extraweapons.armors.TitanChestplate;
 import me.lightning.extraweapons.items.CustomItem;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -30,7 +30,7 @@ public class EntityDamageByEntityListener implements Listener {
         ItemStack chest = player.getInventory().getChestplate();
         if (chest != null && !chest.getType().isAir() && chest.hasItemMeta()) {
             if (Utils.isItem(chest, "titan_chestplate")) {
-                ((TitanChestPlate) ArmorRegistry.get("titan_chestplate")).onHit(e);
+                ((TitanChestplate) ArmorRegistry.get("titan_chestplate")).onHit(e);
             }
         }
     }

@@ -1,7 +1,6 @@
 package me.lightning.extraweapons.items;
 
 import me.lightning.extraweapons.Cooldown;
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
@@ -10,7 +9,6 @@ import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.EquipmentSlotGroup;
@@ -20,10 +18,10 @@ import org.bukkit.inventory.ItemStack;
 public class VampireBlade extends CustomItem {
 
     Cooldown passiveCooldown = new Cooldown();
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double duration = config.getDouble("items.vampire_blade.cooldown");
     double baseDamage = config.getDouble("items.vampire_blade.damage");
     double ratio = config.getDouble("items.vampire_blade.lifesteal_ratio");
+
 
     @Override
     public String getID() {

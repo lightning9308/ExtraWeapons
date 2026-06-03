@@ -1,6 +1,5 @@
 package me.lightning.extraweapons.armors;
 
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
@@ -10,7 +9,6 @@ import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.entity.EntityExhaustionEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.EquipmentSlotGroup;
@@ -21,7 +19,6 @@ import static org.bukkit.event.entity.EntityExhaustionEvent.ExhaustionReason.*;
 
 public class SpeedsterBoots extends CustomArmor {
 
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
     double bonusSpeed = config.getDouble("armor.speedster_boots.bonus_speed");
 
     @Override

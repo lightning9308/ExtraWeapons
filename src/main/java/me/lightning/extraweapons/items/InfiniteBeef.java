@@ -1,14 +1,12 @@
 package me.lightning.extraweapons.items;
 
 import me.lightning.extraweapons.Cooldown;
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
@@ -17,7 +15,7 @@ import org.bukkit.inventory.ItemStack;
 public class InfiniteBeef extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
-    FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double duration = config.getDouble("items.infinite_beef.cooldown");
     String cooldownMsg = config.getString("messages.cooldown");
 

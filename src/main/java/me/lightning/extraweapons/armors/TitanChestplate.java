@@ -1,6 +1,5 @@
 package me.lightning.extraweapons.armors;
 
-import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
@@ -10,7 +9,6 @@ import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.EquipmentSlot;
@@ -21,9 +19,9 @@ import org.bukkit.inventory.meta.trim.ArmorTrim;
 import org.bukkit.inventory.meta.trim.TrimMaterial;
 import org.bukkit.inventory.meta.trim.TrimPattern;
 
-public class TitanChestPlate extends CustomArmor {
+public class TitanChestplate extends CustomArmor {
 
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double speed = config.getDouble("armor.titan_chestplate.speed");
     double health = config.getDouble("armor.titan_chestplate.health");
     double damageRed = config.getDouble("armor.titan_chestplate.damage_reduction");

@@ -69,5 +69,9 @@ armor:
     damage_penalty: 0.2
     health: 20
 
+  shockwave_chestplate:
+    push: 2
+    cooldown: 7
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

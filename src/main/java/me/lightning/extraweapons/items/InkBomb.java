@@ -10,7 +10,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Snowball;
@@ -24,7 +23,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class InkBomb extends CustomItem {
 
-    private final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
+
     double duration = config.getDouble("items.ink_bomb.cooldown");
     String cooldownMsg = config.getString("messages.cooldown");
 
