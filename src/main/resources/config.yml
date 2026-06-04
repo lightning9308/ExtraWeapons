@@ -53,6 +53,11 @@ items:
 
   shortbow:
     cooldown: 0.25
+
+  blink_dagger:
+    range: 5
+    cooldown: 10
+    damage: 7
 armor:
   jetpack:
     fuel: 100
