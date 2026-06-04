@@ -16,6 +16,7 @@ public class ArmorRegistry {
         register(new TitanChestplate());
         register(new SpeedsterBoots());
         register(new ShockwaveChestplate());
+        register(new GravityChestplate());
     }
 
     private static void register(CustomArmor armor) {REGISTRY.put(armor.getID(), armor);}

@@ -20,31 +20,30 @@ import org.bukkit.util.Vector;
 
 import java.util.Collection;
 
-public class ShockwaveChestplate extends CustomArmor {
+public class GravityChestplate extends CustomArmor {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("armor.shockwave_chestplate.cooldown");
-    double push_strength = config.getDouble("armor.shockwave_chestplate.push");
+    double duration = config.getDouble("armor.gravity_chestplate.cooldown");
+    double pull_strength = config.getDouble("armor.gravity_chestplate.pull");
 
     @Override
     public String getID() {
-        return "shockwave_chestplate";
+        return "gravity_chestplate";
     }
 
     @Override
     public ItemStack createItem() {
         return new ItemBuilder(Material.LEATHER_CHESTPLATE)
-                .itemName(Component.text("Shockwave Chestplate")
+                .itemName(Component.text("Gravity Chestplate")
                         .decoration(TextDecoration.BOLD, true)
-                        .color(TextColor.color(180, 146, 33)))
-                .color(Color.fromRGB(189, 149, 39))
+                        .color(TextColor.color(69, 123, 180)))
+                .color(Color.fromRGB(69, 123, 180))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DYE)
                 .maxDamage(500)
                 .lore(
                         Component.text("§6§lABILITY: SHIFT"),
-                        Component.text("§7Releases a shockwave that"),
-                        Component.text("§7pushes nearby enemies away."),
+                        Component.text("§7Pulls nearby enemies toward you."),
                         Component.text("§8Cooldown: %ss".formatted(duration).replace(".0","")))
                 .build();
     }
@@ -69,16 +68,19 @@ public class ShockwaveChestplate extends CustomArmor {
         entities.remove(player);
         if (entities.isEmpty()) return;
 
-        Particle.EXPLOSION
+        Particle.SWEEP_ATTACK
                 .builder()
-                .location(playerLoc)
+                .location(playerLoc.clone().add(0,1,0))
+                .count(5)
+                .offset(0.5,0.5,0.5)
+                .extra(1)
                 .spawn();
 
-        //apply the push
+        //apply the pull
         for (LivingEntity entity : entities) {
-            Vector push = entity.getLocation().toVector().subtract(playerLoc.toVector()).normalize();
+            Vector pull = playerLoc.toVector().subtract(entity.getLocation().toVector()).normalize();
 
-            entity.setVelocity(push.multiply(push_strength).add(new Vector(0,0.5,0)));
+            entity.setVelocity(pull.multiply(pull_strength).add(new Vector(0,0.5,0)));
         }
 
         cooldown.start(player, duration);

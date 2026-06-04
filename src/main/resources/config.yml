@@ -73,5 +73,9 @@ armor:
     push: 2
     cooldown: 7
 
+  gravity_chestplate:
+    pull: 1
+    cooldown: 7
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

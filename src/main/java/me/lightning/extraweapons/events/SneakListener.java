@@ -2,6 +2,7 @@ package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.Utils;
+import me.lightning.extraweapons.armors.GravityChestplate;
 import me.lightning.extraweapons.armors.Jetpack;
 import me.lightning.extraweapons.armors.ShockwaveChestplate;
 import org.bukkit.entity.Player;
@@ -23,6 +24,9 @@ public class SneakListener implements Listener {
         }
         if (Utils.isItem(chestplate, "shockwave_chestplate")) {
             ((ShockwaveChestplate) ArmorRegistry.get("shockwave_chestplate")).onSneak(e);
+        }
+        if (Utils.isItem(chestplate, "gravity_chestplate")) {
+            ((GravityChestplate) ArmorRegistry.get("gravity_chestplate")).onSneak(e);
         }
     }
 }
