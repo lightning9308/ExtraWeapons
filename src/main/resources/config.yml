@@ -58,6 +58,9 @@ items:
     range: 5
     cooldown: 10
     damage: 7
+
+  molten_edge:
+    damage: 6
 armor:
   jetpack:
     fuel: 100

@@ -29,6 +29,7 @@ public final class ExtraWeapons extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SneakListener(), this);
         getServer().getPluginManager().registerEvents(new ProjectileHitListener(), this);
         getServer().getPluginManager().registerEvents(new EntityShootBowListener(), this);
+        getServer().getPluginManager().registerEvents(new EntityCombustListener(), this);
 
     }
 

@@ -70,7 +70,6 @@ public class ShockBlade extends CustomItem {
     }
 
     @Override
-
     public void rightClick(PlayerInteractEvent e) {
         Player player = e.getPlayer();
 
