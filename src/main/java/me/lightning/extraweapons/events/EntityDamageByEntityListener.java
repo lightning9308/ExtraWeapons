@@ -2,6 +2,7 @@ package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.Utils;
+import me.lightning.extraweapons.armors.MoltenLeggings;
 import me.lightning.extraweapons.armors.TitanChestplate;
 import me.lightning.extraweapons.items.CustomItem;
 import org.bukkit.entity.LivingEntity;
@@ -28,10 +29,15 @@ public class EntityDamageByEntityListener implements Listener {
 
         // custom armor
         ItemStack chest = player.getInventory().getChestplate();
-        if (chest != null && !chest.getType().isAir() && chest.hasItemMeta()) {
-            if (Utils.isItem(chest, "titan_chestplate")) {
-                ((TitanChestplate) ArmorRegistry.get("titan_chestplate")).onHit(e);
-            }
+        ItemStack legs = player.getInventory().getLeggings();
+
+        if (Utils.isItem(chest, "titan_chestplate")) {
+            ((TitanChestplate) ArmorRegistry.get("titan_chestplate")).onHit(e);
         }
+
+        if (Utils.isItem(legs, "molten_leggings")) {
+            ((MoltenLeggings) ArmorRegistry.get("molten_leggings")).onHit(e);
+        }
+
     }
 }

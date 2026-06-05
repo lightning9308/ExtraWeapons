@@ -85,5 +85,8 @@ armor:
     pull: 1
     cooldown: 7
 
+  molten_leggings:
+    defence: 6
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."
