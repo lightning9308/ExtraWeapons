@@ -3,14 +3,18 @@ package me.lightning.extraweapons.armors;
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
+import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.trim.ArmorTrim;
@@ -29,6 +33,7 @@ public class Jetpack extends CustomArmor {
     Cooldown cooldown = new Cooldown();
 
     int maxFuel = config.getInt("armor.jetpack.fuel");
+    int defence = config.getInt("armor.jetpack.defence");
 
 
     @Override
@@ -45,8 +50,13 @@ public class Jetpack extends CustomArmor {
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP,ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_UNBREAKABLE,ItemFlag.HIDE_DYE,ItemFlag.HIDE_ARMOR_TRIM)
                 .unbreakable(true)
                 .color(Color.fromRGB(235,235,235))
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),1, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .armorTrim(new ArmorTrim(TrimMaterial.NETHERITE, TrimPattern.BOLT))
                 .lore(
+                Component.text("§7§l──────────"),
+                Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                Component.empty(),
                 Component.text("§6§lABILITY: SHIFT"),
                 Component.text("§7Consumes fuel to enable flight."),
                 Component.text("§8Fuel: §a%s".formatted(maxFuel)),

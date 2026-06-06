@@ -3,15 +3,19 @@ package me.lightning.extraweapons.armors;
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemBuilder;
+import me.lightning.extraweapons.Keys;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -25,6 +29,7 @@ public class EarthquakeBoots extends CustomArmor {
     Cooldown cooldown = new Cooldown();
 
     double duration = config.getDouble("armor.earthquake_boots.cooldown");
+    double defence = config.getDouble("armor.earthquake_boots.defence");
     String cooldownMsg = config.getString("messages.cooldown");
 
     @Override
@@ -40,8 +45,13 @@ public class EarthquakeBoots extends CustomArmor {
                         .color(TextColor.color(100, 73, 8))
                         .decoration(TextDecoration.BOLD,true))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP,ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_UNBREAKABLE)
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
+                .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
                 .unbreakable(true)
                 .lore(
+                Component.text("§7§l──────────"),
+                Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                Component.empty(),
                 Component.text("§6§lPASSIVE"),
                 Component.text("§7Fall damage releases a shockwave"),
                 Component.text("§7that damages and slows enemies inside."),

@@ -2,6 +2,7 @@ package me.lightning.extraweapons.armors;
 
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ItemBuilder;
+import me.lightning.extraweapons.Keys;
 import me.lightning.extraweapons.Utils;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
@@ -10,10 +11,13 @@ import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.EquipmentSlotGroup;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
@@ -26,6 +30,7 @@ public class GravityChestplate extends CustomArmor {
 
     double duration = config.getDouble("armor.gravity_chestplate.cooldown");
     double pull_strength = config.getDouble("armor.gravity_chestplate.pull");
+    double defence = config.getDouble("armor.gravity_chestplate.defence");
 
     @Override
     public String getID() {
@@ -40,8 +45,13 @@ public class GravityChestplate extends CustomArmor {
                         .color(TextColor.color(69, 123, 180)))
                 .color(Color.fromRGB(69, 123, 180))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DYE)
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .maxDamage(500)
                 .lore(
+                        Component.text("§7§l──────────"),
+                        Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                        Component.empty(),
                         Component.text("§6§lABILITY: SHIFT"),
                         Component.text("§7Pulls nearby enemies toward you."),
                         Component.text("§8Cooldown: %ss".formatted(duration).replace(".0","")))
