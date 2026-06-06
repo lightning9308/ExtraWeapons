@@ -30,6 +30,7 @@ public class ItemRegistry {
         register(new ShortBow());
         register(new BlinkDagger());
         register(new MoltenEdge());
+        register(new ThunderRod());
     }
 
     private static void register(CustomItem item) {

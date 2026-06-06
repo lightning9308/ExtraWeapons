@@ -20,7 +20,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class MoltenLeggings extends CustomArmor {
 
-    double defence = config.getDouble("armor.molten_leggings.defence");
+    double defense = config.getDouble("armor.molten_leggings.defense");
 
     @Override
     public String getID() {
@@ -34,13 +34,13 @@ public class MoltenLeggings extends CustomArmor {
                         .decoration(TextDecoration.BOLD,true)
                         .color(TextColor.color(187, 80, 24)))
                 .color(Color.fromRGB(165, 77, 23))
-                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
                 .flags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_DYE)
                 .maxDamage(400)
                 .lore(
                     Component.text("§7§l──────────"),
-                    Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                    Component.text("§7Defense: §2+%s".formatted(defense).replace(".0","")),
                     Component.empty(),
                     Component.text("§6§lPASSIVE"),
                     Component.text("§7Hits burn enemies while on fire."),

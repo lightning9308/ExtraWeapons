@@ -61,18 +61,22 @@ items:
 
   molten_edge:
     damage: 6
+
+  thunder_rod:
+    damage: 5
+    cooldown: 7
 armor:
   jetpack:
     fuel: 100
-    defence: 3
+    defense: 3
 
   earthquake_boots:
     cooldown: 7
-    defence: 3
+    defense: 3
 
   speedster_boots:
     bonus_speed: 0.5
-    defence: 2
+    defense: 2
 
   titan_chestplate:
     speed: -0.2
@@ -83,15 +87,15 @@ armor:
   shockwave_chestplate:
     push: 2
     cooldown: 7
-    defence: 8
+    defense: 8
 
   gravity_chestplate:
     pull: 1
     cooldown: 7
-    defence: 8
+    defense: 8
 
   molten_leggings:
-    defence: 6
+    defense: 6
 
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

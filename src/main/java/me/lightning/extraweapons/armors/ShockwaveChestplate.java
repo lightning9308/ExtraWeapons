@@ -30,7 +30,7 @@ public class ShockwaveChestplate extends CustomArmor {
 
     double duration = config.getDouble("armor.shockwave_chestplate.cooldown");
     double push_strength = config.getDouble("armor.shockwave_chestplate.push");
-    double defence = config.getDouble("armor.shockwave_chestplate.defence");
+    double defense = config.getDouble("armor.shockwave_chestplate.defense");
 
     @Override
     public String getID() {
@@ -45,12 +45,12 @@ public class ShockwaveChestplate extends CustomArmor {
                         .color(TextColor.color(180, 146, 33)))
                 .color(Color.fromRGB(189, 149, 39))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DYE)
-                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .maxDamage(500)
                 .lore(
                         Component.text("§7§l──────────"),
-                        Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                        Component.text("§7Defense: §2+%s".formatted(defense).replace(".0","")),
                         Component.empty(),
                         Component.text("§6§lABILITY: SHIFT"),
                         Component.text("§7Releases a shockwave that"),

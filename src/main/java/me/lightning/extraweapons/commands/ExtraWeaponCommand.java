@@ -68,7 +68,7 @@ public class ExtraWeaponCommand implements CommandExecutor, TabCompleter {
         }
 
         if (subCommand.equalsIgnoreCase("menu")) {
-            Inventory inv = Bukkit.createInventory(player,27, Component.text("ExtraWeapons"));
+            Inventory inv = Bukkit.createInventory(player, 36, Component.text("ExtraWeapons"));
             for (CustomArmor armor : ArmorRegistry.getAll()) {
                 inv.addItem(armor.getItem());
             }

@@ -33,7 +33,7 @@ public class Jetpack extends CustomArmor {
     Cooldown cooldown = new Cooldown();
 
     int maxFuel = config.getInt("armor.jetpack.fuel");
-    int defence = config.getInt("armor.jetpack.defence");
+    int defense = config.getInt("armor.jetpack.defense");
 
 
     @Override
@@ -50,12 +50,12 @@ public class Jetpack extends CustomArmor {
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP,ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_UNBREAKABLE,ItemFlag.HIDE_DYE,ItemFlag.HIDE_ARMOR_TRIM)
                 .unbreakable(true)
                 .color(Color.fromRGB(235,235,235))
-                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),1, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .armorTrim(new ArmorTrim(TrimMaterial.NETHERITE, TrimPattern.BOLT))
                 .lore(
                 Component.text("§7§l──────────"),
-                Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                Component.text("§7Defense: §2+%s".formatted(defense).replace(".0","")),
                 Component.empty(),
                 Component.text("§6§lABILITY: SHIFT"),
                 Component.text("§7Consumes fuel to enable flight."),

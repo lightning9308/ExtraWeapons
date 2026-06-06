@@ -29,7 +29,7 @@ public class EarthquakeBoots extends CustomArmor {
     Cooldown cooldown = new Cooldown();
 
     double duration = config.getDouble("armor.earthquake_boots.cooldown");
-    double defence = config.getDouble("armor.earthquake_boots.defence");
+    double defense = config.getDouble("armor.earthquake_boots.defense");
     String cooldownMsg = config.getString("messages.cooldown");
 
     @Override
@@ -45,12 +45,12 @@ public class EarthquakeBoots extends CustomArmor {
                         .color(TextColor.color(100, 73, 8))
                         .decoration(TextDecoration.BOLD,true))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP,ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_UNBREAKABLE)
-                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
                 .unbreakable(true)
                 .lore(
                 Component.text("§7§l──────────"),
-                Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                Component.text("§7Defense: §2+%s".formatted(defense).replace(".0","")),
                 Component.empty(),
                 Component.text("§6§lPASSIVE"),
                 Component.text("§7Fall damage releases a shockwave"),

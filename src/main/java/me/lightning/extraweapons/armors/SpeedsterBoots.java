@@ -20,7 +20,7 @@ import static org.bukkit.event.entity.EntityExhaustionEvent.ExhaustionReason.*;
 public class SpeedsterBoots extends CustomArmor {
 
     double bonusSpeed = config.getDouble("armor.speedster_boots.bonus_speed");
-    double defence = config.getDouble("armor.speedster_boots.defence");
+    double defense = config.getDouble("armor.speedster_boots.defense");
 
     @Override
     public String getID() {
@@ -35,12 +35,12 @@ public class SpeedsterBoots extends CustomArmor {
                         .decoration(TextDecoration.BOLD, true))
                 .color(Color.fromRGB(85, 120, 150))
                 .flags(ItemFlag.HIDE_DYE, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ADDITIONAL_TOOLTIP)
-                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defence, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.FEET))
                 .attribute(Attribute.GENERIC_MOVEMENT_SPEED, new AttributeModifier(Keys.stats(getID()),bonusSpeed, AttributeModifier.Operation.MULTIPLY_SCALAR_1, EquipmentSlotGroup.FEET))
                 .lore(
                 Component.text("§7§l──────────"),
-                Component.text("§7Defence: §2+%s".formatted(defence).replace(".0","")),
+                Component.text("§7Defense: §2+%s".formatted(defense).replace(".0","")),
                 Component.empty(),
                 Component.text("§6§lPASSIVE"),
                 Component.text("§7Adds %s%% speed, consume".formatted(bonusSpeed * 100).replace(".0","")),

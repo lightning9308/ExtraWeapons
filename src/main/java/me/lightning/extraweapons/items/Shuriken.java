@@ -40,7 +40,7 @@ public class Shuriken extends CustomItem {
                 .flags(ItemFlag.HIDE_ATTRIBUTES)
                 .lore(
                 Component.text("§6§lABILITY: RIGHT CLICK"),
-                Component.text("§7Shoots the shuriken "),
+                Component.text("§7Shoots the shuriken"),
                 Component.text("§7dealing §c%s damage§7.".formatted(baseDamage).replace(".0","")),
                 Component.text("§8Cooldown: %ss".formatted(duration).replace(".0","")))
 
