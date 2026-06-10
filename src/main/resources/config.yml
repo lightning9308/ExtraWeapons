@@ -97,5 +97,21 @@ armor:
   molten_leggings:
     defense: 6
 
+  thunder_helmet:
+    defense: 3
+
+  thunder_chestplate:
+    defense: 8
+
+  thunder_leggings:
+    defense: 6
+
+  thunder_boots:
+    defense: 3
+
+  thunder_set:
+    bonus_speed: 0.5
+    bonus_damage: 0.3
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

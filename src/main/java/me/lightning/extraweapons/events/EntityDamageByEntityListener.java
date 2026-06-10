@@ -4,6 +4,7 @@ import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.armors.MoltenLeggings;
 import me.lightning.extraweapons.armors.TitanChestplate;
+import me.lightning.extraweapons.armors.armorsets.ThunderSet;
 import me.lightning.extraweapons.items.CustomItem;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -37,6 +38,11 @@ public class EntityDamageByEntityListener implements Listener {
 
         if (Utils.isItem(legs, "molten_leggings")) {
             ((MoltenLeggings) ArmorRegistry.get("molten_leggings")).onHit(e);
+        }
+
+        // armor sets
+        if (Utils.fullSet(player, "thunder")) {
+            ThunderSet.onHit(e);
         }
 
     }

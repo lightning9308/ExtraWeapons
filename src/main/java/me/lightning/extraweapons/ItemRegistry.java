@@ -3,11 +3,11 @@ package me.lightning.extraweapons;
 import me.lightning.extraweapons.items.*;
 
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ItemRegistry {
-    private static final Map<String, CustomItem> REGISTRY = new HashMap<>();
+    private static final Map<String, CustomItem> REGISTRY = new LinkedHashMap<>();
 
     public static void load() {
         register(new AntiFlightStick());

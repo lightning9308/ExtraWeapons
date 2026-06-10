@@ -67,7 +67,7 @@ public class FrostOrb extends CustomItem {
         if (!(e.getHitEntity() instanceof LivingEntity entity)) return;
         UUID entityUUID = entity.getUniqueId();
 
-        int currentHits = frost.getOrDefault(entityUUID, 1);
+        int currentHits = frost.getOrDefault(entityUUID, 0) + 1;
 
         if (currentHits >= 4) {
             entity.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS,30,10,false,false, false));
@@ -81,7 +81,7 @@ public class FrostOrb extends CustomItem {
 
             frost.remove(entityUUID);
         } else {
-            frost.put(entityUUID, currentHits + 1);
+            frost.put(entityUUID, currentHits);
         }
 
     }

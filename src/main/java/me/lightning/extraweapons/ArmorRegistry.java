@@ -3,14 +3,18 @@ package me.lightning.extraweapons;
 import me.lightning.extraweapons.armors.*;
 
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ArmorRegistry {
 
-    private static final Map<String, CustomArmor> REGISTRY = new HashMap<>();
+    private static final Map<String, CustomArmor> REGISTRY = new LinkedHashMap<>();
 
     public static void load() {
+        register(new ThunderHelmet());
+        register(new ThunderChestplate());
+        register(new ThunderLeggings());
+        register(new ThunderBoots());
         register(new EarthquakeBoots());
         register(new Jetpack());
         register(new TitanChestplate());
@@ -18,12 +22,19 @@ public class ArmorRegistry {
         register(new ShockwaveChestplate());
         register(new GravityChestplate());
         register(new MoltenLeggings());
+
     }
 
-    private static void register(CustomArmor armor) {REGISTRY.put(armor.getID(), armor);}
+    private static void register(CustomArmor armor) {
+        REGISTRY.put(armor.getID(), armor);
+    }
 
-    public static CustomArmor get(String ID) {return REGISTRY.get(ID);}
+    public static CustomArmor get(String ID) {
+        return REGISTRY.get(ID);
+    }
 
-    public static Collection<CustomArmor> getAll() {return REGISTRY.values();}
+    public static Collection<CustomArmor> getAll() {
+        return REGISTRY.values();
+    }
 
 }

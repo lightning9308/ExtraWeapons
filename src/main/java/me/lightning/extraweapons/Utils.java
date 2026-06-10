@@ -4,7 +4,9 @@ import me.lightning.extraweapons.armors.CustomArmor;
 import me.lightning.extraweapons.items.CustomItem;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
@@ -81,5 +83,14 @@ public class Utils {
         if (id == null) return null;
 
         return ArmorRegistry.get(id);
+    }
+
+    public static boolean fullSet(Player player, String setName) {
+        PlayerInventory inv = player.getInventory();
+
+        return isItem(inv.getHelmet(), setName + "_helmet") &&
+                isItem(inv.getChestplate(), setName + "_chestplate") &&
+                isItem(inv.getLeggings(), setName + "_leggings") &&
+                isItem(inv.getBoots(), setName + "_boots");
     }
 }

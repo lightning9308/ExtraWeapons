@@ -67,7 +67,7 @@ public class ThunderRod extends CustomItem {
         if (target != null) {
             player.getWorld().strikeLightningEffect(target);
             for (LivingEntity entity : target.getNearbyLivingEntities(2,2,2)) {
-                if (entity == player) continue;
+                if (entity.equals(player)) continue;
 
                 entity.damage(damage, player);
                 entity.setFireTicks(60);
