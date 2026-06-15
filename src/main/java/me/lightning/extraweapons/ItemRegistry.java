@@ -31,6 +31,7 @@ public class ItemRegistry {
         register(new BlinkDagger());
         register(new MoltenEdge());
         register(new ThunderRod());
+        register(new Magnet());
     }
 
     private static void register(CustomItem item) {

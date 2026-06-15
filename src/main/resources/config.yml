@@ -65,6 +65,10 @@ items:
   thunder_rod:
     damage: 5
     cooldown: 7
+
+  magnet:
+    cooldown: 5
+    range: 8
 armor:
   jetpack:
     fuel: 100

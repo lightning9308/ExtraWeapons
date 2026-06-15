@@ -27,7 +27,7 @@ public class ExtraWeaponCommand implements CommandExecutor, TabCompleter {
         if (!(sender instanceof Player player)) return true;
 
         String helpMsg = """
-                §8§m§l----------------§6§lExtra§Weapons§8§m§l----------------
+                §8§m§l----------------§6§lExtraWeapons§8§m§l----------------
                 §5
                 §8§l» §6/extraweapons get <item> §7- §fGet a custom item
                 §8§l» §6/extraweapons reload     §7- §fReload configuration

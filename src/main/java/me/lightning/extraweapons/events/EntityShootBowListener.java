@@ -1,5 +1,6 @@
 package me.lightning.extraweapons.events;
 
+import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.items.LaunchBow;
 import me.lightning.extraweapons.items.TrackerBow;
@@ -16,11 +17,11 @@ public class EntityShootBowListener implements Listener {
         ItemStack bow = e.getBow();
 
         if (Utils.isItem(bow,"tracker_bow")) {
-            ((TrackerBow)Utils.getCustomItem(bow)).onBowShoot(e);
+            ((TrackerBow) ItemRegistry.get("tracker_bow")).onBowShoot(e);
         }
 
         if (Utils.isItem(bow,"launch_bow")) {
-            ((LaunchBow)Utils.getCustomItem(bow)).onBowShoot(e);
+            ((LaunchBow) ItemRegistry.get("launch_bow")).onBowShoot(e);
         }
     }
 }
