@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import com.destroystokyo.paper.event.player.PlayerArmorChangeEvent;
 import me.lightning.extraweapons.ExtraWeapons;

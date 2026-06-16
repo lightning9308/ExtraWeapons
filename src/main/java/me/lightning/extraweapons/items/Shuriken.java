@@ -21,8 +21,8 @@ import java.util.Collection;
 public class Shuriken extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
-    double duration = config.getDouble("items.shuriken.cooldown");
-    double baseDamage = config.getDouble("items.shuriken.damage");
+    double duration = config.getDouble("items.shuriken.cooldown", 0.5);
+    double baseDamage = config.getDouble("items.shuriken.damage", 4);
 
 
     @Override

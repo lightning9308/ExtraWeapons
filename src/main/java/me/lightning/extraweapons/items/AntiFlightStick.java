@@ -19,7 +19,7 @@ public class AntiFlightStick extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("items.anti-flight_stick.cooldown");
+    double duration = config.getDouble("items.anti-flight_stick.cooldown", 7);
     String cooldownMsg = config.getString("messages.cooldown");
 
     @Override

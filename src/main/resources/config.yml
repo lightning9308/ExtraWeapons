@@ -117,5 +117,10 @@ armor:
     bonus_speed: 0.5
     bonus_damage: 0.3
 
+  gravity_leggings:
+    defense: 6
+    knockback_resistance: 0.5
+    fall_speedee: 0.25
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

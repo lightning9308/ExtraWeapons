@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
@@ -19,7 +19,7 @@ import org.bukkit.inventory.meta.trim.TrimPattern;
 
 public class ThunderHelmet extends CustomArmor {
 
-    double defense = config.getDouble("armor.thunder_helmet.defense");
+    double defense = config.getDouble("armor.thunder_helmet.defense", 3);
 
     @Override
     public String getID() {

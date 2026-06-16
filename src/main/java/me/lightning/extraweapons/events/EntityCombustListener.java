@@ -3,7 +3,7 @@ package me.lightning.extraweapons.events;
 import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.Utils;
-import me.lightning.extraweapons.armors.MoltenLeggings;
+import me.lightning.extraweapons.armor.MoltenLeggings;
 import me.lightning.extraweapons.items.MoltenEdge;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

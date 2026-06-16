@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ExtraWeapons;
@@ -32,8 +32,8 @@ public class Jetpack extends CustomArmor {
 
     Cooldown cooldown = new Cooldown();
 
-    int maxFuel = config.getInt("armor.jetpack.fuel");
-    int defense = config.getInt("armor.jetpack.defense");
+    int maxFuel = config.getInt("armor.jetpack.fuel", 100);
+    int defense = config.getInt("armor.jetpack.defense", 3);
 
 
     @Override

@@ -1,6 +1,6 @@
 package me.lightning.extraweapons;
 
-import me.lightning.extraweapons.armors.CustomArmor;
+import me.lightning.extraweapons.armor.CustomArmor;
 import me.lightning.extraweapons.items.CustomItem;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -12,7 +12,7 @@ import org.bukkit.persistence.PersistentDataType;
 
 public class Utils {
     static FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
-    static String cooldownMsg = config.getString("messages.cooldown");
+    static String cooldownMsg = config.getString("messages.cooldown", "&cAbility on cooldown for &e%time%s&c.");
 
     public static String cooldownMsg(String remaining) {
         return ChatColor.translateAlternateColorCodes('&',cooldownMsg).replace("%time%",remaining);

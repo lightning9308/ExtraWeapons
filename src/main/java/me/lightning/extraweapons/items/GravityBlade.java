@@ -18,8 +18,8 @@ import org.bukkit.util.Vector;
 
 public class GravityBlade extends CustomItem {
 
-    double baseDamage = config.getDouble("items.gravity_blade.damage");
-    double pull_strength = config.getDouble("items.gravity_blade.pull");
+    double baseDamage = config.getDouble("items.gravity_blade.damage", 6);
+    double pull_strength = config.getDouble("items.gravity_blade.pull", 2);
 
     @Override
     public String getID() {

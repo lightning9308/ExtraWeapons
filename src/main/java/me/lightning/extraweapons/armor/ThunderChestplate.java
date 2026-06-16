@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
@@ -17,26 +17,26 @@ import org.bukkit.inventory.meta.trim.ArmorTrim;
 import org.bukkit.inventory.meta.trim.TrimMaterial;
 import org.bukkit.inventory.meta.trim.TrimPattern;
 
-public class ThunderLeggings extends CustomArmor {
+public class ThunderChestplate extends CustomArmor {
 
-    double defense = config.getDouble("armor.thunder_leggings.defense");
+    double defense = config.getDouble("armor.thunder_chestplate.defense", 8);
 
     @Override
     public String getID() {
-        return "thunder_leggings";
+        return "thunder_chestplate";
     }
 
     @Override
     public ItemStack createItem() {
-        return new ItemBuilder(Material.LEATHER_LEGGINGS)
-                .itemName(Component.text("Thunder Leggings")
+        return new ItemBuilder(Material.LEATHER_CHESTPLATE)
+                .itemName(Component.text("Thunder Chestplate")
                         .decoration(TextDecoration.BOLD, true)
                         .color(TextColor.color(0, 59, 155)))
                 .color(Color.fromRGB(0, 59, 155))
                 .armorTrim(new ArmorTrim(TrimMaterial.LAPIS, TrimPattern.FLOW))
-                .maxDamage(500)
-                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()), defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
-                .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
+                .maxDamage(600)
+                .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()), defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
+                .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DYE, ItemFlag.HIDE_ARMOR_TRIM)
                 .lore(
                         Component.text("§7§l──────────"),
@@ -51,6 +51,6 @@ public class ThunderLeggings extends CustomArmor {
 
     @Override
     public EquipmentSlot getType() {
-        return EquipmentSlot.LEGS;
+        return EquipmentSlot.CHEST;
     }
 }

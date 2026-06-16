@@ -24,9 +24,9 @@ public class BlinkDagger extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("items.blink_dagger.cooldown");
-    int range = config.getInt("items.blink_dagger.range");
-    double baseDamage = config.getDouble("items.blink_dagger.damage");
+    double duration = config.getDouble("items.blink_dagger.cooldown", 10);
+    int range = config.getInt("items.blink_dagger.range", 5);
+    double baseDamage = config.getDouble("items.blink_dagger.damage", 7);
 
     @Override
     public String getID() {

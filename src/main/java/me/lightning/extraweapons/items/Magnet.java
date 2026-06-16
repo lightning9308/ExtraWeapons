@@ -19,8 +19,8 @@ import java.util.Collection;
 
 public class Magnet extends CustomItem {
 
-    double duration = config.getDouble("items.magnet.cooldown");
-    double range = config.getDouble("items.magnet.range");
+    double duration = config.getDouble("items.magnet.cooldown", 5);
+    double range = config.getDouble("items.magnet.range", 8);
 
     Cooldown cooldown = new Cooldown();
 

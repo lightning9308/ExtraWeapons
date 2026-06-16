@@ -1,6 +1,6 @@
 package me.lightning.extraweapons;
 
-import me.lightning.extraweapons.armors.*;
+import me.lightning.extraweapons.armor.*;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -21,8 +21,8 @@ public class ArmorRegistry {
         register(new SpeedsterBoots());
         register(new ShockwaveChestplate());
         register(new GravityChestplate());
+        register(new GravityLeggings());
         register(new MoltenLeggings());
-
     }
 
     private static void register(CustomArmor armor) {

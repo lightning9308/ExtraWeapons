@@ -19,7 +19,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class DualBlades extends CustomItem {
 
-    double baseDamage = config.getDouble("items.dual_blades.damage");
+    double baseDamage = config.getDouble("items.dual_blades.damage", 5);
 
     @Override
     public String getID() {

@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors.armorsets;
+package me.lightning.extraweapons.armor.armorsets;
 
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ExtraWeapons;
@@ -24,8 +24,8 @@ import java.util.*;
 public class ThunderSet {
     private static final FileConfiguration config = ExtraWeapons.getPlugin().getConfig();
 
-    static double bonus_speed = config.getDouble("armor.thunder_set.bonus_speed");
-    static double bonus_damage = config.getDouble("armor.thunder_set.bonus_damage");
+    static double bonus_speed = config.getDouble("armor.thunder_set.bonus_speed", 0.5);
+    static double bonus_damage = config.getDouble("armor.thunder_set.bonus_damage", 0.3);
 
     static Cooldown cooldown = new Cooldown();
 

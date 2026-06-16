@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ItemBuilder;
@@ -24,26 +24,26 @@ import org.bukkit.util.Vector;
 
 import java.util.Collection;
 
-public class GravityChestplate extends CustomArmor {
+public class ShockwaveChestplate extends CustomArmor {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("armor.gravity_chestplate.cooldown");
-    double pull_strength = config.getDouble("armor.gravity_chestplate.pull");
-    double defense = config.getDouble("armor.gravity_chestplate.defense");
+    double duration = config.getDouble("armor.shockwave_chestplate.cooldown", 7);
+    double push_strength = config.getDouble("armor.shockwave_chestplate.push", 2);
+    double defense = config.getDouble("armor.shockwave_chestplate.defense", 8);
 
     @Override
     public String getID() {
-        return "gravity_chestplate";
+        return "shockwave_chestplate";
     }
 
     @Override
     public ItemStack createItem() {
         return new ItemBuilder(Material.LEATHER_CHESTPLATE)
-                .itemName(Component.text("Gravity Chestplate")
+                .itemName(Component.text("Shockwave Chestplate")
                         .decoration(TextDecoration.BOLD, true)
-                        .color(TextColor.color(69, 123, 180)))
-                .color(Color.fromRGB(69, 123, 180))
+                        .color(TextColor.color(180, 146, 33)))
+                .color(Color.fromRGB(189, 149, 39))
                 .flags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_DYE)
                 .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.CHEST))
@@ -53,7 +53,8 @@ public class GravityChestplate extends CustomArmor {
                         Component.text("§7Defense: §2+%s".formatted(defense).replace(".0","")),
                         Component.empty(),
                         Component.text("§6§lABILITY: SHIFT"),
-                        Component.text("§7Pulls nearby enemies toward you."),
+                        Component.text("§7Releases a shockwave that"),
+                        Component.text("§7pushes nearby enemies away."),
                         Component.text("§8Cooldown: %ss".formatted(duration).replace(".0","")))
                 .build();
     }
@@ -78,19 +79,16 @@ public class GravityChestplate extends CustomArmor {
         entities.remove(player);
         if (entities.isEmpty()) return;
 
-        Particle.SWEEP_ATTACK
+        Particle.EXPLOSION
                 .builder()
-                .location(playerLoc.clone().add(0,1,0))
-                .count(5)
-                .offset(0.5,0.5,0.5)
-                .extra(1)
+                .location(playerLoc)
                 .spawn();
 
-        //apply the pull
+        //apply the push
         for (LivingEntity entity : entities) {
-            Vector pull = playerLoc.toVector().subtract(entity.getLocation().toVector()).normalize();
+            Vector push = entity.getLocation().toVector().subtract(playerLoc.toVector()).normalize();
 
-            entity.setVelocity(pull.multiply(pull_strength).add(new Vector(0,0.5,0)));
+            entity.setVelocity(push.multiply(push_strength).add(new Vector(0,0.5,0)));
         }
 
         cooldown.start(player, duration);

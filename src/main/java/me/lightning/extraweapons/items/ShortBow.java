@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class ShortBow extends CustomItem {
 
-    double duration = config.getDouble("items.shortbow.cooldown");
+    double duration = config.getDouble("items.shortbow.cooldown", 0.25);
 
     Cooldown cooldown = new Cooldown();
 

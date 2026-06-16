@@ -16,8 +16,8 @@ public class HealingWand extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("items.healing_wand.cooldown");
-    double healAmount = config.getDouble("items.healing_wand.heal");
+    double duration = config.getDouble("items.healing_wand.cooldown", 7);
+    double healAmount = config.getDouble("items.healing_wand.heal", 10);
     String cooldownMsg = config.getString("messages.cooldown");
 
     @Override

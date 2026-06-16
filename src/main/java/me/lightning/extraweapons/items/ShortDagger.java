@@ -18,7 +18,7 @@ import org.bukkit.util.Vector;
 
 public class ShortDagger extends CustomItem {
 
-    double baseDamage = config.getDouble("items.short_dagger.damage");
+    double baseDamage = config.getDouble("items.short_dagger.damage", 6);
 
     @Override
     public String getID() {

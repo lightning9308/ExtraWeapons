@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class FirstStrike extends CustomItem {
 
-    double baseDamage = config.getDouble("items.first_strike.damage");
+    double baseDamage = config.getDouble("items.first_strike.damage", 7);
 
     @Override
     public String getID() {

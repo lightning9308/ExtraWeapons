@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
@@ -20,7 +20,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class MoltenLeggings extends CustomArmor {
 
-    double defense = config.getDouble("armor.molten_leggings.defense");
+    double defense = config.getDouble("armor.molten_leggings.defense", 6);
 
     @Override
     public String getID() {

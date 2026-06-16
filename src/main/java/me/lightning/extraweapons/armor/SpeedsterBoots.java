@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
@@ -19,8 +19,8 @@ import static org.bukkit.event.entity.EntityExhaustionEvent.ExhaustionReason.*;
 
 public class SpeedsterBoots extends CustomArmor {
 
-    double bonusSpeed = config.getDouble("armor.speedster_boots.bonus_speed");
-    double defense = config.getDouble("armor.speedster_boots.defense");
+    double bonusSpeed = config.getDouble("armor.speedster_boots.bonus_speed", 0.5);
+    double defense = config.getDouble("armor.speedster_boots.defense", 2);
 
     @Override
     public String getID() {

@@ -18,9 +18,9 @@ import org.bukkit.inventory.ItemStack;
 public class VampireBlade extends CustomItem {
 
     Cooldown passiveCooldown = new Cooldown();
-    double duration = config.getDouble("items.vampire_blade.cooldown");
-    double baseDamage = config.getDouble("items.vampire_blade.damage");
-    double ratio = config.getDouble("items.vampire_blade.lifesteal_ratio");
+    double duration = config.getDouble("items.vampire_blade.cooldown", 1);
+    double baseDamage = config.getDouble("items.vampire_blade.damage", 7);
+    double ratio = config.getDouble("items.vampire_blade.lifesteal_ratio", 0.25);
 
 
     @Override

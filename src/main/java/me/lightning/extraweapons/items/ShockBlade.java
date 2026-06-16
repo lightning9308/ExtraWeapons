@@ -24,10 +24,10 @@ public class ShockBlade extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
 
-    double baseDamage = config.getDouble("items.shock_blade.damage");
-    double duration = config.getDouble("items.shock_blade.cooldown");
-    int xp = config.getInt("items.shock_blade.xp_cost");
-    double abilityDamage = config.getDouble("items.shock_blade.ability_damage");
+    double baseDamage = config.getDouble("items.shock_blade.damage", 5);
+    double duration = config.getDouble("items.shock_blade.cooldown", 0.25);
+    int xp = config.getInt("items.shock_blade.xp_cost", 250);
+    double abilityDamage = config.getDouble("items.shock_blade.ability_damage", 7);
 
     @Override
     public String getID() {

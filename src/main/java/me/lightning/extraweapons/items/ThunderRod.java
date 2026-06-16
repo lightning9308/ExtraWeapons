@@ -19,8 +19,8 @@ public class ThunderRod extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
 
-    double damage = config.getDouble("items.thunder_rod.damage");
-    double duration = config.getDouble("items.thunder_rod.cooldown");
+    double damage = config.getDouble("items.thunder_rod.damage", 5);
+    double duration = config.getDouble("items.thunder_rod.cooldown", 7);
 
     @Override
     public String getID() {

@@ -24,7 +24,7 @@ import org.bukkit.potion.PotionEffectType;
 public class InkBomb extends CustomItem {
 
 
-    double duration = config.getDouble("items.ink_bomb.cooldown");
+    double duration = config.getDouble("items.ink_bomb.cooldown", 10);
     String cooldownMsg = config.getString("messages.cooldown");
 
     Cooldown cooldown = new Cooldown();

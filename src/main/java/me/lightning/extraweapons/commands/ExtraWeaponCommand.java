@@ -3,7 +3,7 @@ package me.lightning.extraweapons.commands;
 import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.ItemRegistry;
-import me.lightning.extraweapons.armors.CustomArmor;
+import me.lightning.extraweapons.armor.CustomArmor;
 import me.lightning.extraweapons.items.CustomItem;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
@@ -13,9 +13,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.util.StringUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -105,12 +107,17 @@ public class ExtraWeaponCommand implements CommandExecutor, TabCompleter {
             );
         }
 
+        List<String> allItems = Stream.concat(
+                ItemRegistry.getAll().stream().map(CustomItem::getID),
+                ArmorRegistry.getAll().stream().map(CustomArmor::getID)
+        ).toList();
+
+        final List<String> validArgs = new ArrayList<>();
+
         if (args[0].equalsIgnoreCase("get")) {
-            return Stream.concat(
-                            ItemRegistry.getAll().stream().map(CustomItem::getID),
-                            ArmorRegistry.getAll().stream().map(CustomArmor::getID)
-            ).toList();
+            return StringUtil.copyPartialMatches(args[1], allItems, validArgs);
         }
+
         return List.of();
     }
 }

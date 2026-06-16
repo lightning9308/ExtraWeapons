@@ -17,7 +17,7 @@ import org.bukkit.util.Vector;
 public class LaunchBow extends CustomItem {
 
 
-    double duration = config.getDouble("items.launch_bow.cooldown");
+    double duration = config.getDouble("items.launch_bow.cooldown", 3);
     String cooldownMsg = config.getString("messages.cooldown");
 
     Cooldown cooldown = new Cooldown();

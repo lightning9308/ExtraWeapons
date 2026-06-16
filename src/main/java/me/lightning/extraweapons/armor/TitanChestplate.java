@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.ItemBuilder;
 import me.lightning.extraweapons.Keys;
@@ -22,10 +22,10 @@ import org.bukkit.inventory.meta.trim.TrimPattern;
 public class TitanChestplate extends CustomArmor {
 
 
-    double speed = config.getDouble("armor.titan_chestplate.speed");
-    double health = config.getDouble("armor.titan_chestplate.health");
-    double damageRed = config.getDouble("armor.titan_chestplate.damage_reduction");
-    double damagePenalty = config.getDouble("armor.titan_chestplate.damage_penalty");
+    double speed = config.getDouble("armor.titan_chestplate.speed", -0.2);
+    double health = config.getDouble("armor.titan_chestplate.health", 20);
+    double damageRed = config.getDouble("armor.titan_chestplate.damage_reduction", 0.2);
+    double damagePenalty = config.getDouble("armor.titan_chestplate.damage_penalty", 0.2);
 
 
     @Override

@@ -18,7 +18,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class MoltenEdge extends CustomItem {
 
-    double baseDamage = config.getDouble("items.molten_edge.damage");
+    double baseDamage = config.getDouble("items.molten_edge.damage", 6);
 
     @Override
     public String getID() {

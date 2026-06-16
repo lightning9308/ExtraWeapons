@@ -1,4 +1,4 @@
-package me.lightning.extraweapons.armors;
+package me.lightning.extraweapons.armor;
 
 import me.lightning.extraweapons.Cooldown;
 import me.lightning.extraweapons.ExtraWeapons;
@@ -28,8 +28,8 @@ public class EarthquakeBoots extends CustomArmor {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("armor.earthquake_boots.cooldown");
-    double defense = config.getDouble("armor.earthquake_boots.defense");
+    double duration = config.getDouble("armor.earthquake_boots.cooldown", 7);
+    double defense = config.getDouble("armor.earthquake_boots.defense", 3);
     String cooldownMsg = config.getString("messages.cooldown");
 
     @Override

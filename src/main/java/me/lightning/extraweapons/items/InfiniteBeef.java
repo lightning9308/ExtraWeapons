@@ -16,7 +16,7 @@ public class InfiniteBeef extends CustomItem {
 
     Cooldown cooldown = new Cooldown();
 
-    double duration = config.getDouble("items.infinite_beef.cooldown");
+    double duration = config.getDouble("items.infinite_beef.cooldown", 20);
     String cooldownMsg = config.getString("messages.cooldown");
 
     @Override

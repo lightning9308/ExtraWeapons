@@ -17,9 +17,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class LongSword extends CustomItem {
 
-    double farDamage = config.getDouble("items.longsword.far_damage");
-    double closeDamage = config.getDouble("items.longsword.close_damage");
-    double range = config.getDouble("items.longsword.range");
+    double farDamage = config.getDouble("items.longsword.far_damage", 8);
+    double closeDamage = config.getDouble("items.longsword.close_damage", 6);
+    double range = config.getDouble("items.longsword.range", 3);
 
     @Override
     public String getID() {
