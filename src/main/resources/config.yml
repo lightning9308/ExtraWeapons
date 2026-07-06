@@ -69,6 +69,11 @@ items:
   magnet:
     cooldown: 5
     range: 8
+
+  warden_shield:
+    blocking_duration: 3
+    cooldown: 5
+
 armor:
   jetpack:
     fuel: 100

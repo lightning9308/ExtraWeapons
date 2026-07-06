@@ -4,6 +4,7 @@ import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.armor.CustomArmor;
 import me.lightning.extraweapons.items.MoltenEdge;
+import me.lightning.extraweapons.items.WardenShield;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -34,10 +35,13 @@ public class DamageListener implements Listener {
 
         }
 
+        //custom items
         ItemStack held = player.getInventory().getItemInMainHand();
 
         if (Utils.isItem(held, "molten_edge")) {
             ((MoltenEdge) ItemRegistry.get("molten_edge")).onDamage(e);
         }
+
+        ((WardenShield) ItemRegistry.get("warden_shield")).onDamage(e);
     }
 }

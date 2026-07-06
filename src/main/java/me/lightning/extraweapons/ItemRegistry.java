@@ -32,6 +32,7 @@ public class ItemRegistry {
         register(new MoltenEdge());
         register(new ThunderRod());
         register(new Magnet());
+        register(new WardenShield());
     }
 
     private static void register(CustomItem item) {
