@@ -74,6 +74,9 @@ items:
     blocking_duration: 3
     cooldown: 5
 
+  web_shooter:
+    cooldown: 8
+
 armor:
   jetpack:
     fuel: 100

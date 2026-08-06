@@ -33,6 +33,7 @@ public class ItemRegistry {
         register(new ThunderRod());
         register(new Magnet());
         register(new WardenShield());
+        register(new WebShooter());
     }
 
     private static void register(CustomItem item) {

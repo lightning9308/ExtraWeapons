@@ -290,6 +290,15 @@
 
 ---
 
+## Warden Shield
+
+### [Right-Click]
+- Consume the warden shield to block
+- all incoming damage for 3s.
+- Cooldown: 5s
+
+---
+
 ## Shortbow
 
 ### [Right-Click]
@@ -311,6 +320,15 @@
 ### [Right-Click]
 - Restores hunger.
 - Cooldown: 20s
+
+---
+
+## Web Shooter
+
+### [Right-Click]
+- Shoots a web projectile
+- that spawns cobwebs on impact.
+- Cooldown: 8s
 
 ---
 

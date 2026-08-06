@@ -3,6 +3,7 @@ package me.lightning.extraweapons.events;
 import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.items.FrostOrb;
 import me.lightning.extraweapons.items.InkBomb;
+import me.lightning.extraweapons.items.WebShooter;
 import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,6 +19,9 @@ public class ProjectileHitListener implements Listener {
         }
         if (projectile.hasMetadata("ink_bomb")) {
             ((InkBomb)ItemRegistry.get("ink_bomb")).onProjectileHit(e);
+        }
+        if (projectile.hasMetadata("web_shooter")) {
+            ((WebShooter)ItemRegistry.get("web_shooter")).onProjectileHit(e);
         }
     }
 }
