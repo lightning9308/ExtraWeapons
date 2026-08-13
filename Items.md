@@ -54,6 +54,22 @@
 
 ---
 
+## Photon Visor
+
+### Stats
+
+- Defense: +2
+
+### [Shift-Click]
+- Consumes energy to activate a continuous laser beam,
+- piercing and damaging all enemies in its path.
+- Energy: 100
+
+### Passive
+- Energy automatically recharges when inactive.
+
+---
+
 ## Tracker Bow
 
 ### Passive

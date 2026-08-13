@@ -63,6 +63,7 @@ public class GravityChestplate extends CustomArmor {
         return EquipmentSlot.CHEST;
     }
 
+    @Override
     public void onSneak(PlayerToggleSneakEvent e) {
         if (!e.isSneaking()) return;
         Player player = e.getPlayer();

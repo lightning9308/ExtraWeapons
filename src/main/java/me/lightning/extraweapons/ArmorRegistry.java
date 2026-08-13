@@ -23,6 +23,7 @@ public class ArmorRegistry {
         register(new GravityChestplate());
         register(new GravityLeggings());
         register(new MoltenLeggings());
+        register(new PhotonVisor());
     }
 
     private static void register(CustomArmor armor) {

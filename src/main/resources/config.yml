@@ -130,5 +130,12 @@ armor:
     knockback_resistance: 0.5
     fall_speedee: 0.25
 
+  photon_visor:
+    defense: 2
+    damage: 2
+    energy: 100
+    range: 8
+    recharge_rate: 2
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

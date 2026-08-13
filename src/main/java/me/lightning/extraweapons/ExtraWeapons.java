@@ -2,6 +2,7 @@ package me.lightning.extraweapons;
 
 import me.lightning.extraweapons.commands.ExtraWeaponCommand;
 import me.lightning.extraweapons.events.*;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ExtraWeapons extends JavaPlugin {
@@ -18,6 +19,7 @@ public final class ExtraWeapons extends JavaPlugin {
 
         getCommand("extraweapons").setExecutor(new ExtraWeaponCommand());
 
+        getServer().getPluginManager().registerEvents(new playerQuitListener(), this);
         getServer().getPluginManager().registerEvents(new PickupListener(), this);
         getServer().getPluginManager().registerEvents(new EntityExhaustionListener(), this);
         getServer().getPluginManager().registerEvents(new AnvilListener(), this);
@@ -36,7 +38,7 @@ public final class ExtraWeapons extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        Bukkit.getScheduler().cancelTasks(this);
     }
 
 

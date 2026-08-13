@@ -5,6 +5,7 @@ import me.lightning.extraweapons.ExtraWeapons;
 import me.lightning.extraweapons.Keys;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -21,6 +22,8 @@ public abstract class CustomArmor {
     public void onDamage(EntityDamageEvent e) {}
 
     public void onArmorChange(PlayerArmorChangeEvent e) {}
+
+    public void onSneak(PlayerToggleSneakEvent e) {}
 
     public abstract EquipmentSlot getType();
 

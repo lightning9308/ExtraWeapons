@@ -79,6 +79,7 @@ public class Jetpack extends CustomArmor {
         return EquipmentSlot.BODY;
     }
 
+    @Override
     public void onSneak(PlayerToggleSneakEvent e) {
         if (!e.isSneaking()) return;
         Player player = e.getPlayer();

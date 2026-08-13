@@ -1,16 +1,16 @@
 package me.lightning.extraweapons.events;
 
-import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.Utils;
-import me.lightning.extraweapons.armor.GravityChestplate;
-import me.lightning.extraweapons.armor.Jetpack;
-import me.lightning.extraweapons.armor.ShockwaveChestplate;
+import me.lightning.extraweapons.armor.CustomArmor;
 import me.lightning.extraweapons.armor.armorsets.ThunderSet;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.List;
 
 public class SneakListener implements Listener {
 
@@ -18,18 +18,19 @@ public class SneakListener implements Listener {
     public void onSneak(PlayerToggleSneakEvent e) {
         Player player = e.getPlayer();
 
-        ItemStack chestplate = player.getInventory().getChestplate();
+        for (EquipmentSlot slot : List.of(
+                EquipmentSlot.HEAD,
+                EquipmentSlot.CHEST,
+                EquipmentSlot.LEGS,
+                EquipmentSlot.FEET)) {
 
-        if (Utils.isItem(chestplate, "jetpack")) {
-            ((Jetpack) ArmorRegistry.get("jetpack")).onSneak(e);
-        }
+            ItemStack item = player.getEquipment().getItem(slot);
 
-        if (Utils.isItem(chestplate, "shockwave_chestplate")) {
-            ((ShockwaveChestplate) ArmorRegistry.get("shockwave_chestplate")).onSneak(e);
-        }
+            CustomArmor armorPiece = Utils.getCustomArmor(item);
+            if (armorPiece == null) continue;
 
-        if (Utils.isItem(chestplate, "gravity_chestplate")) {
-            ((GravityChestplate) ArmorRegistry.get("gravity_chestplate")).onSneak(e);
+            armorPiece.onSneak(e);
+
         }
 
         //armor sets
