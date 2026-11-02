@@ -125,6 +125,24 @@ armor:
     bonus_speed: 0.5
     bonus_damage: 0.3
 
+  crystal_helmet:
+    defense: 3
+
+  crystal_chestplate:
+    defense: 8
+
+  crystal_leggings:
+    defense: 6
+
+  crystal_boots:
+    defense: 3
+
+  crystal_set:
+    charges: 100
+    absorption: 4
+    damage: 6
+    push: 3
+
   gravity_leggings:
     defense: 6
     knockback_resistance: 0.5

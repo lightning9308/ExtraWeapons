@@ -1,5 +1,6 @@
 package me.lightning.extraweapons.events;
 
+import me.lightning.extraweapons.armor.armorsets.CrystalSet;
 import me.lightning.extraweapons.armor.armorsets.ThunderSet;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,5 +12,6 @@ public class DeathListener implements Listener {
     public void onDeath(PlayerDeathEvent e) {
 
         ThunderSet.onDeath(e);
+        CrystalSet.onDeath(e);
     }
 }

@@ -3,6 +3,7 @@ package me.lightning.extraweapons.events;
 import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.armor.CustomArmor;
+import me.lightning.extraweapons.armor.armorsets.CrystalSet;
 import me.lightning.extraweapons.items.MoltenEdge;
 import me.lightning.extraweapons.items.WardenShield;
 import org.bukkit.entity.Player;
@@ -43,5 +44,9 @@ public class DamageListener implements Listener {
         }
 
         ((WardenShield) ItemRegistry.get("warden_shield")).onDamage(e);
+
+        if (Utils.fullSet(player, "crystal")) {
+            CrystalSet.onDamage(e);
+        }
     }
 }

@@ -13,6 +13,21 @@
 
 ---
 
+## Crystal Set
+
+### Stats
+
+- Helmet Defense: +3
+- Chestplate Defense: +8
+- Leggings Defense: +6
+- Boots Defense: +3
+
+### Full Set Bonus
+- Taking damage builds Crystal Charges.
+- At max charges gain absorption and release a damaging shockwave.
+
+---
+
 ## Earthquake Boots
 
 ### Stats

@@ -24,6 +24,10 @@ public class ArmorRegistry {
         register(new GravityLeggings());
         register(new MoltenLeggings());
         register(new PhotonVisor());
+        register(new CrystalHelmet());
+        register(new CrystalChestplate());
+        register(new CrystalLeggings());
+        register(new CrystalBoots());
     }
 
     private static void register(CustomArmor armor) {
