@@ -19,6 +19,7 @@ public class ArmorRegistry {
         register(new Jetpack());
         register(new TitanChestplate());
         register(new SpeedsterBoots());
+        register(new SpringBoots());
         register(new ShockwaveChestplate());
         register(new GravityChestplate());
         register(new GravityLeggings());

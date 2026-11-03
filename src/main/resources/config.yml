@@ -90,6 +90,13 @@ armor:
     bonus_speed: 0.5
     defense: 2
 
+  spring_boots:
+    defense: 3
+    max_charge: 100
+    charge_rate: 7
+    jump_power: 2
+    cooldown: 3
+
   titan_chestplate:
     speed: -0.2
     damage_reduction: 0.2

@@ -214,6 +214,22 @@
 
 ---
 
+## Spring Boots
+
+### Stats
+
+- Defense: +3
+
+### [Shift-Hold]
+- Charge a super jump while sneaking.
+- The longer you hold, the higher you launch.
+- Cooldown: 3s
+
+### Passive
+- Bounce off the ground instead of taking fall damage.
+
+---
+
 ## Gravity Chestplate
 
 ### Stats
