@@ -16,10 +16,12 @@ public final class ExtraWeapons extends JavaPlugin {
         ItemRegistry.load();
         ArmorRegistry.load();
 
+        new UpdateChecker(this);
 
         getCommand("extraweapons").setExecutor(new ExtraWeaponCommand());
 
         getServer().getPluginManager().registerEvents(new playerQuitListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
         getServer().getPluginManager().registerEvents(new PickupListener(), this);
         getServer().getPluginManager().registerEvents(new EntityExhaustionListener(), this);
         getServer().getPluginManager().registerEvents(new AnvilListener(), this);
