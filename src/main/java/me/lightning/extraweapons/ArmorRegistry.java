@@ -25,6 +25,7 @@ public class ArmorRegistry {
         register(new GravityLeggings());
         register(new MoltenLeggings());
         register(new PhotonVisor());
+        register(new BerserkerHelmet());
         register(new CrystalHelmet());
         register(new CrystalChestplate());
         register(new CrystalLeggings());

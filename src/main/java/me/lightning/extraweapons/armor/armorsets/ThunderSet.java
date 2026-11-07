@@ -15,7 +15,7 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 
 import java.time.Duration;
@@ -104,8 +104,8 @@ public class ThunderSet {
         }
     }
 
-    public static void onDeath(PlayerDeathEvent e) {
-        Player player = e.getPlayer();
+    public static void onDeath(EntityDeathEvent e) {
+        if (!(e.getEntity() instanceof Player player)) return;
         UUID playerUUID = player.getUniqueId();
 
         voltage.remove(playerUUID);

@@ -33,7 +33,7 @@ public class MoltenLeggings extends CustomArmor {
                 .itemName(Component.text("Molten Leggings")
                         .decoration(TextDecoration.BOLD,true)
                         .color(TextColor.color(187, 80, 24)))
-                .color(Color.fromRGB(165, 77, 23))
+                .color(Color.fromRGB(200, 66, 3))
                 .attribute(Attribute.GENERIC_ARMOR, new AttributeModifier(Keys.stats(getID()),defense, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
                 .attribute(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(Keys.stats(getID()),3, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlotGroup.LEGS))
                 .flags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ADDITIONAL_TOOLTIP, ItemFlag.HIDE_DYE)

@@ -18,6 +18,11 @@ public class RightClickListener implements Listener {
         if (!held.hasItemMeta() || held.getType().isAir()) return;
 
         Utils.updateItem(held);
+
+        if (Utils.isItem(held, "berserker_helmet")) {
+            e.setCancelled(true);
+        }
+
         CustomItem item = Utils.getCustomItem(held);
         if (item == null) return;
         item.rightClick(e);

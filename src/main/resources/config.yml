@@ -162,5 +162,8 @@ armor:
     range: 8
     recharge_rate: 2
 
+  berserker_helmet:
+    defense: 3
+
 messages:
   cooldown: "&cAbility on cooldown for &e%time%s&c."

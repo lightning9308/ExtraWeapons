@@ -13,7 +13,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
@@ -93,7 +93,8 @@ public class CrystalSet {
         }
     }
 
-    public static void onDeath(PlayerDeathEvent e) {
-        charges.remove(e.getPlayer().getUniqueId());
+    public static void onDeath(EntityDeathEvent e) {
+        if (!(e.getEntity() instanceof Player player)) return;
+        charges.remove(player.getUniqueId());
     }
 }

@@ -275,6 +275,18 @@
 - Deals 2x damage when striking an enemy from behind.
 
 ---
+## Berserker Helmet
+
+### Stats
+
+- Defense: +3
+
+### Passive
+- Below 30% HP gain 20% movement speed, 20% attack speed, and knockback immunity.
+- While Strength is active take 10% increased damage.
+- Kills grant Strength I for 8s.
+
+---
 
 ## Shock Blade
 
