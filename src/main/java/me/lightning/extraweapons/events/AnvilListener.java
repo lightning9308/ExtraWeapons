@@ -11,7 +11,10 @@ public class AnvilListener implements Listener {
 
     @EventHandler
     public void anvil(PrepareAnvilEvent e) {
-        if (Utils.isCustom(e.getInventory().getFirstItem())) {
+        ItemStack first = e.getInventory().getFirstItem();
+        ItemStack second = e.getInventory().getSecondItem();
+
+        if (Utils.isCustom(first) && (second == null || second.getType() != Material.ENCHANTED_BOOK)) {
             e.setResult(ItemStack.of(Material.AIR));
         }
     }

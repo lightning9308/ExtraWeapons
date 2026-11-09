@@ -4,7 +4,7 @@ import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.armor.MoltenLeggings;
-import me.lightning.extraweapons.items.MoltenEdge;
+import me.lightning.extraweapons.items.melee.MoltenEdge;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

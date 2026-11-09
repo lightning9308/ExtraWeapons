@@ -1,6 +1,6 @@
 ## ExtraWeapons
 
-ExtraWeapons adds **30+** unique weapons, armor, and items.
+ExtraWeapons adds **35+** unique weapons, armor, and items.
 Perfect for SMP servers and RPG servers.
 
 ![Player using the AntiFlight Stick on a flying bee](https://cdn.modrinth.com/data/cached_images/e0aa621e95d6a2b9732c87f92183a27e8485e46e.gif)
@@ -20,4 +20,4 @@ Perfect for SMP servers and RPG servers.
 |`/extraweapons menu`|extraweapons.admin|Opens a menu containing all custom items|
 
 ### Supported Version
- 1.21.x - 26.1.2
+ 1.21.x - 26.3

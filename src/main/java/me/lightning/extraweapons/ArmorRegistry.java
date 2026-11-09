@@ -1,6 +1,14 @@
 package me.lightning.extraweapons;
 
 import me.lightning.extraweapons.armor.*;
+import me.lightning.extraweapons.armor.armorsets.crystal.CrystalBoots;
+import me.lightning.extraweapons.armor.armorsets.crystal.CrystalChestplate;
+import me.lightning.extraweapons.armor.armorsets.crystal.CrystalHelmet;
+import me.lightning.extraweapons.armor.armorsets.crystal.CrystalLeggings;
+import me.lightning.extraweapons.armor.armorsets.thunder.ThunderBoots;
+import me.lightning.extraweapons.armor.armorsets.thunder.ThunderChestplate;
+import me.lightning.extraweapons.armor.armorsets.thunder.ThunderHelmet;
+import me.lightning.extraweapons.armor.armorsets.thunder.ThunderLeggings;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;

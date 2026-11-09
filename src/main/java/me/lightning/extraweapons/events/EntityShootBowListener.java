@@ -2,8 +2,8 @@ package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.ItemRegistry;
 import me.lightning.extraweapons.Utils;
-import me.lightning.extraweapons.items.LaunchBow;
-import me.lightning.extraweapons.items.TrackerBow;
+import me.lightning.extraweapons.items.ranged.LaunchBow;
+import me.lightning.extraweapons.items.ranged.TrackerBow;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -34,7 +34,7 @@ public class BerserkerHelmet extends CustomArmor {
     @Override
     public ItemStack createItem() {
         return new ItemBuilder(Material.PLAYER_HEAD)
-                .itemName(Component.text("Berserker Helmet")
+                .displayName(Component.text("Berserker Helmet")
                         .color(TextColor.color(139, 0, 0))
                         .decoration(TextDecoration.BOLD, true))
                 .skullTexture("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjgyMjA5NDYyYjViMDJmZWYxYWJlNjhhNjUxNGFmZjM1YzYzOThiYzIyNjE1NDExMjY5NjgyZTAzZDNjMzA0OCJ9fX0=")

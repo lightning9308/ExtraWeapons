@@ -2,7 +2,7 @@ package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.armor.CustomArmor;
-import me.lightning.extraweapons.armor.armorsets.ThunderSet;
+import me.lightning.extraweapons.armor.armorsets.thunder.ThunderSet;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

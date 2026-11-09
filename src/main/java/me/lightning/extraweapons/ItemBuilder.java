@@ -3,6 +3,7 @@ package me.lightning.extraweapons;
 import com.destroystokyo.paper.profile.PlayerProfile;
 import com.destroystokyo.paper.profile.ProfileProperty;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
@@ -52,6 +53,11 @@ public class ItemBuilder implements Cloneable {
 
     public ItemBuilder itemName(Component name) {
         meta.itemName(name);
+        return this;
+    }
+
+    public ItemBuilder displayName(Component name) {
+        meta.displayName(name.decoration(TextDecoration.ITALIC, false));
         return this;
     }
 

@@ -1,6 +1,15 @@
 package me.lightning.extraweapons;
 
-import me.lightning.extraweapons.items.*;
+import me.lightning.extraweapons.items.CustomItem;
+import me.lightning.extraweapons.items.melee.*;
+import me.lightning.extraweapons.items.miscellaneous.*;
+import me.lightning.extraweapons.items.ranged.LaunchBow;
+import me.lightning.extraweapons.items.ranged.ShortBow;
+import me.lightning.extraweapons.items.ranged.ThunderRod;
+import me.lightning.extraweapons.items.ranged.TrackerBow;
+import me.lightning.extraweapons.items.throwables.FrostOrb;
+import me.lightning.extraweapons.items.throwables.InkBomb;
+import me.lightning.extraweapons.items.throwables.Shuriken;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;

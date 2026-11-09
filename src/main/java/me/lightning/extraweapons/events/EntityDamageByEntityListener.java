@@ -4,7 +4,7 @@ import me.lightning.extraweapons.ArmorRegistry;
 import me.lightning.extraweapons.Utils;
 import me.lightning.extraweapons.armor.MoltenLeggings;
 import me.lightning.extraweapons.armor.TitanChestplate;
-import me.lightning.extraweapons.armor.armorsets.ThunderSet;
+import me.lightning.extraweapons.armor.armorsets.thunder.ThunderSet;
 import me.lightning.extraweapons.items.CustomItem;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;

@@ -51,6 +51,7 @@ public class Utils {
 
 
             meta.itemName(customItemMeta.itemName());
+            meta.displayName(customItemMeta.displayName());
             meta.lore(customItemMeta.lore());
             meta.setAttributeModifiers(customItemMeta.getAttributeModifiers());
         }
@@ -60,6 +61,7 @@ public class Utils {
             ItemMeta customItemMeta = customArmor.getItem().getItemMeta();
 
             meta.itemName(customItemMeta.itemName());
+            meta.displayName(customItemMeta.displayName());
             meta.lore(customItemMeta.lore());
             meta.setAttributeModifiers(customItemMeta.getAttributeModifiers());
         }

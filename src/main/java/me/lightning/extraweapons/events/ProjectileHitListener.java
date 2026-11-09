@@ -1,9 +1,9 @@
 package me.lightning.extraweapons.events;
 
 import me.lightning.extraweapons.ItemRegistry;
-import me.lightning.extraweapons.items.FrostOrb;
-import me.lightning.extraweapons.items.InkBomb;
-import me.lightning.extraweapons.items.WebShooter;
+import me.lightning.extraweapons.items.miscellaneous.WebShooter;
+import me.lightning.extraweapons.items.throwables.FrostOrb;
+import me.lightning.extraweapons.items.throwables.InkBomb;
 import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
